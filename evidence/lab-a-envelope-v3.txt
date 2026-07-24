@@ -1,0 +1,17 @@
+Lab A Evidence — Etergis Envelope v3 Reference
+Date: 2026-07-09T21:05:01.917678
+
+v2 wire bytes: 92
+v3 wire bytes: 1180
+v2 round-trip: 0.3ms
+v3 round-trip: 6.7ms
+DEK v2 match:  True
+DEK v3 match:  True
+Tamper detect: PASS
+
+v3 wire format:
+  ephemeral X25519 epk : 32 bytes
+  ML-KEM-768 ct        : 1088 bytes
+  wrapped DEK (ct+tag) : 48 bytes
+  AES-GCM nonce        : 12 bytes
+  Total                : 1180 bytes

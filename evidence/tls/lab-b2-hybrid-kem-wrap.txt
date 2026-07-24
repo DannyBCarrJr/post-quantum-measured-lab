@@ -1,0 +1,15 @@
+Lab B2 Evidence — Hybrid KEM Key Wrapping
+X25519 + ML-KEM-768 + AES-256-GCM
+Date: 2026-07-09T20:56:08.256092
+
+Envelope wire format: 1193 bytes total
+  X25519 epk   : 32 bytes
+  ML-KEM-768 ct: 1088 bytes
+  AES nonce    : 12 bytes
+  Wrapped DEK  : 48 bytes
+  Overhead     : 13 bytes
+
+DEK recovery: SUCCESS
+Tamper rejection: PASS
+Wrap median  : 2.7 ms (subprocess)
+Unwrap median: 2.5 ms (subprocess)

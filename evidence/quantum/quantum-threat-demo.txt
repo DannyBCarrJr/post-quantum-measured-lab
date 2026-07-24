@@ -1,0 +1,16 @@
+# Quantum-threat demo evidence — Shor factors 15, Grover finds 5
+# Host: WSL2 Ubuntu 26.04, Python 3.14.4, local statevector sim (no Aer, no IBM account)
+# Script: src/lab-quantum/quantum_threat_demo.py | Env: requirements-quantum.txt
+# Deterministic outcome (both algorithms succeed); exact shot counts vary run to run.
+
+qiskit 2.5.0 | built-in StatevectorSampler (no Aer, no account)
+
+== Shor: factor 15 ==
+  a=7  measured phase=0.25  ->  period r=4
+  factors of 15: 3 x 5
+  RESULT: FACTORED 15
+
+== Grover: find 5 in a 3-qubit register ==
+  iters=2 shots=2048
+  most-measured: 101 = 5 (target 5, 94.5% of shots)
+  RESULT: FOUND 5

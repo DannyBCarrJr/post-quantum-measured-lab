@@ -1,0 +1,19 @@
+Lab D Evidence — PQC Benchmark Suite
+OpenSSL: OpenSSL 3.5.5 27 Jan 2026 (Library: OpenSSL 3.5.5 27 Jan 2026)
+CPU: 
+N: 1000 iterations
+Date: 2026-07-11T19:11:48.720516
+
+KEM Results (median ms):
+  X25519: keygen=0.026ms encap=0.052ms decap=0.026ms
+  ML-KEM-512: keygen=0.020ms encap=0.016ms decap=0.023ms
+  ML-KEM-768: keygen=0.030ms encap=0.021ms decap=0.030ms
+  ML-KEM-1024: keygen=0.045ms encap=0.027ms decap=0.039ms
+
+Signature Results (median ms):
+  Ed25519: keygen=0.026ms sign=0.027ms verify=0.067ms sig_bytes=64
+  ML-DSA-44: keygen=0.065ms sign=0.273ms verify=0.071ms sig_bytes=2420
+  ML-DSA-65: keygen=0.115ms sign=0.460ms verify=0.108ms sig_bytes=3309
+  ML-DSA-87: keygen=0.159ms sign=0.547ms verify=0.169ms sig_bytes=4627
+  SLH-DSA-SHA2-128s: keygen=27.921ms sign=211.877ms verify=0.197ms sig_bytes=7856
+  SLH-DSA-SHA2-128f: keygen=0.436ms sign=10.052ms verify=0.613ms sig_bytes=17088

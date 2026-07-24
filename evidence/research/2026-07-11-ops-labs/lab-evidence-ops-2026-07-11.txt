@@ -1,0 +1,31 @@
+OpenSSL: OpenSSL 3.5.5 27 Jan 2026 (Library: OpenSSL 3.5.5 27 Jan 2026)
+Date (host): 2026-07-12T02:24:50Z
+
+=== Building CAs ===
+  ECDSA CA cert (DER):  430 B
+  ML-DSA CA cert (DER): 5562 B
+
+=== OPS-1: OCSP response sizing ===
+  ECDSA       request=   69 B   response=   753 B
+  ML-DSA-65   request=   69 B   response=  9129 B
+
+=== OPS-2: CRL sizing (synthesized revoked entries in index.txt) ===
+  signer         0-entry    1k-entry   10k-entry
+  ECDSA            223 B     21229 B    210232 B
+  ML-DSA-65       3470 B     24475 B    213478 B
+  (per-entry bytes = (10k - 1k)/9000; signature delta = ML-DSA 0-entry minus ECDSA 0-entry)
+
+=== OPS-3: cross-sign root rotation ===
+  Sizes (DER):
+    old-root (ML-DSA-65) self-signed :   5577 B
+    new-root (SLH-DSA-128s) self     :   8200 B
+    new-root cross-cert (by old root):   3686 B
+    issuing CA (ML-DSA-65)           :  10166 B
+    leaf (ML-DSA-65)                 :   5622 B
+
+  Path A — relying party trusts the NEW root directly:
+    leaf.crt: OK
+  Path B — relying party trusts only the OLD root; new root reached via cross-cert:
+    leaf.crt: OK
+
+=== OPS labs complete ===

@@ -1,0 +1,25 @@
+# Lab evidence: PQC certificate chain size + issuance mechanics
+# OpenSSL 3.5.5 27 Jan 2026 (Library: OpenSSL 3.5.5 27 Jan 2026)
+# All certs: minimal realistic extensions, DER-measured, fixed serial+validity.
+# Deterministic except the ECDSA baseline: ECDSA signatures are variable-length DER
+#   (r/s leading-zero encoding), so ecdsa-p256 sizes jitter +/-1-2 B run to run.
+#   PQC (ML-DSA/SLH-DSA/ML-KEM) sizes are fixed-length and reproduce exactly.
+
+## Chain size comparison (bytes, DER)
+ecdsa-p256    int=483    leaf=518    wire-chain=1001  
+mldsa65-pure  int=5613   leaf=5644   wire-chain=11257 
+mldsa87-pure  int=7571   leaf=7602   wire-chain=15173 
+slh128s-root  int=10160  leaf=5644   wire-chain=15804    (root.der=8197)
+  mldsa65-pure  11.2x classical (wire vs ECDSA 1001)
+  mldsa87-pure  15.2x classical (wire vs ECDSA 1001)
+  slh128s-root  15.8x classical (wire vs ECDSA 1001)
+
+## ML-KEM-768 leaf cert (signed by ML-DSA-65 issuing CA)
+## KEM key self-signs a CSR? -> NO (expected). openssl says: operation not supported for this keytype
+## ML-KEM-768 leaf cert size: 4811 bytes DER
+
+## OpenSSL composite signature support: 0 entries (0 = none)
+
+## Verify outputs:
+mixed-chain-leaf.crt: OK
+kemleaf.crt: OK

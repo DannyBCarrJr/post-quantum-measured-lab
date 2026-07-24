@@ -1,0 +1,23 @@
+Lab B3 Evidence — PQC TLS Handshake
+OpenSSL: OpenSSL 3.5.5 27 Jan 2026 (Library: OpenSSL 3.5.5 27 Jan 2026)
+Date: 2026-07-09T20:56:17.829677
+
+Classical handshake:
+  Group   : unknown
+  Bytes   : 832 read / 306 written
+  Avg ms  : 4.8
+
+PQC hybrid handshake:
+  Group   : X25519MLKEM768
+  Cipher  : TLS_AES_256_GCM_SHA384
+  Protocol: TLSv1.3
+  Bytes   : 1921 read / 1492 written
+  Avg ms  : 4.9
+
+key_share sizes:
+  x25519: 32 bytes
+  SecP256r1: 65 bytes
+  X25519MLKEM768: 1216 bytes
+  SecP384r1MLKEM1024: 1665 bytes
+
+PQC TLS confirmed working: True

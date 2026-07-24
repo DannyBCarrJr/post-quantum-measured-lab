@@ -1,0 +1,6 @@
+name: mlkem_interop
+description: ML-KEM-768 interop harness (pqcrypto <-> OpenSSL 3.5.5)
+environment:
+  sdk: ^3.10.0
+dependencies:
+  pqcrypto: 0.4.0
