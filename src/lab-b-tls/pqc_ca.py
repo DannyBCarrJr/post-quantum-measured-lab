@@ -365,7 +365,7 @@ def main():
     print("    □ OCSP responses need to be signed with ML-DSA")
     print("    □ CRL signatures need to be ML-DSA")
     print("    □ CT log inclusion proofs need PQC signatures")
-    print("    □ HSM support for ML-DSA key storage (Venafi/CyberArk)")
+    print("    □ HSM and CLM platform support for ML-DSA key storage")
     print()
     print("  These are Chapter 8 topics (PKI operations: revocation, the HSM gate, CLM state).")
 
