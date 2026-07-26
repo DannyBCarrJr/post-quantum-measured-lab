@@ -82,7 +82,11 @@ temporary directory and clean up after themselves.
 ## The book
 
 *Post-Quantum, Measured: migrating TLS, PKI, and application crypto with evidence you can
-reproduce.* Whitepaper and details: https://post-quantum-measured.pages.dev
+reproduce.*
+
+**Get the book: https://leanpub.com/post-quantum-measured**
+
+Free whitepaper and details: https://post-quantum-measured.pages.dev
 
 The book is the migration: the sequencing, the tradeoffs, the failure modes, and the
 judgment about what matters and when. This repository is the proof that the numbers in it
