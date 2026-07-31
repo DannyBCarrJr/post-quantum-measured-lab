@@ -86,6 +86,8 @@ reproduce.*
 
 **Get the book: https://leanpub.com/post-quantum-measured**
 
+Also on Kindle: https://www.amazon.com/dp/B0HBW7VNSN
+
 Free whitepaper and details: https://post-quantum-measured.pages.dev
 
 The book is the migration: the sequencing, the tradeoffs, the failure modes, and the
