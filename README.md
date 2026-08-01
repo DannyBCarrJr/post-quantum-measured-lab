@@ -79,6 +79,16 @@ bash   src/lab-ca/san-size-sweep.sh
 Each script is self-contained and prints what it measured. The shell labs work in a
 temporary directory and clean up after themselves.
 
+## Related: the certificate compatibility matrix
+
+The book's certificate work continues in a separate repository,
+**[pqc-cert-matrix](https://github.com/DannyBCarrJr/pqc-cert-matrix)**: what actually
+happens when a post-quantum or hybrid X.509 chain meets real client software. Eight chain
+shapes across eleven client stacks, 88 cells, each a script plus captured output, plus
+transport measurements from key-log-decrypted handshakes. Same evidence standard as this
+repository. Written up at
+[Hybrid certificates, weighed](https://carrdigital.dev/writing/hybrid-certificates-weighed/).
+
 ## The book
 
 *Post-Quantum, Measured: migrating TLS, PKI, and application crypto with evidence you can
