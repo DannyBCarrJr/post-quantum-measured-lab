@@ -12,6 +12,16 @@ authors:
     affiliation: "Carr Digital LLC"
 repository-code: "https://github.com/DannyBCarrJr/post-quantum-measured-lab"
 url: "https://leanpub.com/post-quantum-measured"
+doi: 10.5281/zenodo.21750546
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21750546
+    description: >-
+      Concept DOI. Always resolves to the latest version; cite this one unless
+      you need to pin a specific release.
+  - type: doi
+    value: 10.5281/zenodo.21750547
+    description: Version DOI for v1.0.0.
 abstract: >-
   Reproducible labs and captured output behind every claim the book
   Post-Quantum, Measured labels Verified: ML-KEM, ML-DSA and SLH-DSA

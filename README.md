@@ -1,5 +1,8 @@
 # Post-Quantum, Measured: the lab
 
+[![DOI](https://zenodo.org/badge/1310524485.svg)](https://doi.org/10.5281/zenodo.21750546)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Runnable companion code and captured output for the book *Post-Quantum, Measured*
 by Danny B. Carr, Jr. (Carr Digital LLC).
 
