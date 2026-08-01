@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+title: "Post-Quantum, Measured: the lab"
+message: >-
+  Runnable companion code for the book Post-Quantum, Measured. If you cite a
+  measurement from the book, cite this repository for the code and captured
+  output that produced it.
+type: software
+authors:
+  - given-names: "Danny B."
+    family-names: Carr
+    name-suffix: Jr.
+    affiliation: "Carr Digital LLC"
+repository-code: "https://github.com/DannyBCarrJr/post-quantum-measured-lab"
+url: "https://leanpub.com/post-quantum-measured"
+abstract: >-
+  Reproducible labs and captured output behind every claim the book
+  Post-Quantum, Measured labels Verified: ML-KEM, ML-DSA and SLH-DSA
+  performance, certificate sizes, TLS handshake behaviour, and hybrid key
+  exchange, taken on stock OpenSSL 3.5 on a single laptop with no HSM, cloud
+  account, or network access required.
+keywords:
+  - post-quantum cryptography
+  - OpenSSL
+  - ML-KEM
+  - ML-DSA
+  - SLH-DSA
+  - TLS
+  - benchmarks
+license: MIT
+references:
+  - type: book
+    title: >-
+      Post-Quantum, Measured: Migrating TLS, PKI, and application crypto with
+      evidence you can reproduce
+    authors:
+      - given-names: "Danny B."
+        family-names: Carr
+        name-suffix: Jr.
+    publisher:
+      name: "Carr Digital LLC"
+    year: 2026
+    url: "https://leanpub.com/post-quantum-measured"
