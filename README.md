@@ -30,7 +30,7 @@ and you cannot reproduce it from here, that is a bug worth reporting.
   statevector simulator.
 - Dart SDK for the `audit-pqcrypto/` interop check only.
 
-No network access, no HSM, and no cloud account is required by any lab.
+No network, no HSM, no cloud account. Every lab runs on the machine in front of you.
 
 ## Labs
 
