@@ -1,0 +1,22 @@
+records: 1914 | with ssl: 1914 | distinct IPs: 1908 | port 3389: 1774
+
+self-signed: 1834 (95.8%) | CA-issued: 80
+weak-hash (SHA-1/MD5) total: 611 | self-signed: 602 | CA-issued: 9
+weak self-signed on EOL Windows: 563 of 602 weak self-signed
+weak-hash rate: EOL self-signed 61.2% (563/920) vs current 4.3% (39/914)
+
+PQC hybrid kex on 2 DISTINCT hosts (FLOOR, not census):  [host CNs redacted; re-run analyze.py against the export to see them]
+   <pqc-host-1>  ['X25519MLKEM768']
+   <pqc-host-2>  ['SecP256r1MLKEM768', 'SecP384r1MLKEM1024', 'X25519MLKEM768']
+
+duplicate certs: 66 shared across >1 distinct IP | 944 distinct IPs implicated (49.5% of hosts)
+  largest shared certs (distinct IPs | distinct orgs):
+     149 ips | 10 orgs
+     141 ips | 26 orgs
+     115 ips | 4 orgs
+     100 ips | 8 orgs
+      77 ips | 6 orgs
+
+distinct JARM fingerprints: 77 | top 3 cover 1507 (78.7%)
+keys below RSA-2048: {'rsa-1024': 35, 'dsa-256': 2} (total 37)
+hosts leaking internal domain name pre-auth (NTLM): 1637 (85.5%)
