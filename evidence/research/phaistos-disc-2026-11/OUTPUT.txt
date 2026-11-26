@@ -1,0 +1,69 @@
+# Captured run, 2026-11-25. Python 3.14.4.
+# lineara.xyz at 9c81beba669a4ffec3f5b29d4e7748d02c060eff, linearb.xyz at 84e0b00ec00292e7afd4f88315dd715b11666efb.
+
+$ python3 -I recon.py
+== Inventory
+words: 61 (A 31, B 30)
+sign tokens: 241 legible + 1 damaged; distinct signs: 45
+signs used once: 9 ['04', '05', '11', '15', '17', '30', '42', '43', '44']
+
+== Sign 02
+02 occurrences: 19; word-initial: 19; anywhere else: 0
+13-01 bare at ['A30'], as 02-12-13-01 at ['A26']
+
+== Side A refrain
+02-12-31-26 at A[16, 19, 22]
+  A14 02-27-25-10-23-18
+  A15 28-01
+  A16 02-12-31-26
+  A17 02-12-27-27-35-37-21
+  A18 33-23
+  A19 02-12-31-26
+  A20 02-27-25-10-23-18
+  A21 28-01
+  A22 02-12-31-26
+12-31-26 after stripping a leading 02: 3 times
+
+== Script type: distinct signs expected in a 241-sign text (Zipf usage, s = 1)
+  alphabet        25 signs: distinct mean  24.5 (middle 95%: 23 to 25); signs used once, mean  1.6
+  syllabary       60 signs: distinct mean  48.8 (middle 95%: 43 to 54); signs used once, mean 14.6
+  syllabary       90 signs: distinct mean  61.7 (middle 95%: 54 to 69); signs used once, mean 25.2
+  logo-syllabic  200 signs: distinct mean  86.0 (middle 95%: 76 to 96); signs used once, mean 49.5
+  logographic    800 signs: distinct mean 120.0 (middle 95%: 107 to 133); signs used once, mean 88.0
+inventories where >= 5% of trials land within 3 of both 45 distinct and 9 once-only: 45 to 65
+
+== Unicity distance, illustrative
+H(K) for 45 signs mapped one-to-one into 60 syllables: log2(60!/15!) = 231.9 bits
+U at an assumed 2.5 bits/syllable redundancy: 93 signs (disc has 241)
+
+$ python3 -I attack.py LinearAInscriptions.js LinearBInscriptions.js lexicon.js
+
+== Linear A dictionary: 782 dictionary words, 62-syllable inventory, 52 unique disc words (60 tokens)
+  [as transcribed] v2 unique: real [13, 14, 14] | controls 14 to 17 (mean 15.4) -> FAIL
+  [as transcribed] v1 tokens: real [16, 15, 16] | controls 14 to 17 -> would fail under the rigged score
+  [as transcribed] best real-disc key reads: SA-SA-ME <- 29-29-34, WI-TE-RO <- 27-44-08, DE-JU-KU <- 37-23-05, DU-RU-WI <- 22-25-27, SA-MA-TI <- 29-33-01, SA-RO-QE <- 29-08-13
+  [as transcribed] best scrambled key reads: KI-RI-TA₂ <- 07-12-43, RA-NA-RE <- 01-04-23, TU-PI-TA <- 45-27-25, JA-WA-PI <- 35-33-27, RO-SI-RA <- 29-18-01, DU-RI-TE <- 40-12-06
+  [as transcribed] three-plus-syllable real words found on scrambled discs: 115 across 12 controls; on the real disc: 27 across 3 seeds
+  [as transcribed] POST-HOC, repeat-preserving controls, v2: real [13, 14, 14] | controls 12 to 15 (mean 13.5) -> real beats every control on all seeds: no
+  [reversed] v2 unique: real [14, 12, 14] | controls 14 to 17 (mean 15.2) -> FAIL
+  [reversed] v1 tokens: real [16, 15, 17] | controls 14 to 17 -> would fail under the rigged score
+  [reversed] best real-disc key reads: QA-NU-MA <- 08-44-27, PA-TA-DA <- 38-03-10, WI-DI-NA <- 40-36-26, TU-ME-SE <- 18-14-16, KU-NI-SU <- 01-33-29, KU-MA-JU <- 01-27-09
+  [reversed] best scrambled key reads: PI-TA-RA <- 13-01-21, JA-SA-MU <- 25-30-33, DI-DE-RU <- 12-38-35, SI-MI-TA <- 20-37-01, PA-TA-DA <- 16-01-18, KI-DI-NI <- 08-12-45
+  [reversed] three-plus-syllable real words found on scrambled discs: 113 across 12 controls; on the real disc: 25 across 3 seeds
+  [reversed] POST-HOC, repeat-preserving controls, v2: real [14, 12, 14] | controls 12 to 15 (mean 14.0) -> real beats every control on all seeds: no
+
+== Linear B dictionary (Greek): 4997 dictionary words, 90-syllable inventory, 52 unique disc words (60 tokens)
+  [as transcribed] v2 unique: real [17, 18, 18] | controls 17 to 22 (mean 20.1) -> FAIL
+  [as transcribed] v1 tokens: real [21, 23, 21] | controls 17 to 22 -> would fail under the rigged score
+  [as transcribed] best real-disc key reads: ka-na-to-po <- 12-13-01-18, qa-nwa-so <- 27-44-08, di-da-ka <- 24-40-12, ta-ra-si <- 31-26-35, ka-ta-ra <- 12-31-26, ka-na-to <- 12-13-01
+  [as transcribed] best scrambled key reads: qa-me-si-jo <- 08-27-23-07, a-ne-u-da <- 17-28-10-21, ku-we-jo <- 33-13-07, ja-mu-ta <- 37-31-39, pi-ra-jo <- 34-38-07, we-wa-ta <- 13-01-39
+  [as transcribed] three-plus-syllable real words found on scrambled discs: 170 across 12 controls; on the real disc: 38 across 3 seeds
+  [as transcribed] POST-HOC, repeat-preserving controls, v2: real [17, 18, 18] | controls 16 to 20 (mean 18.0) -> real beats every control on all seeds: no
+  [reversed] v2 unique: real [20, 20, 18] | controls 19 to 23 (mean 20.7) -> FAIL
+  [reversed] v1 tokens: real [24, 25, 23] | controls 19 to 23 -> would fail under the rigged score
+  [reversed] best real-disc key reads: a-ti-mi-te <- 35-19-41-12, qa-ra2-te <- 01-13-12, pu-za-ko <- 08-44-27, ra-wo-te <- 26-31-12, te-ra-wo <- 12-26-31, qi-ta-ro <- 05-23-37
+  [reversed] best scrambled key reads: na-wi-ro <- 26-32-01, ke-da-mi <- 29-45-10, da-ma-te <- 45-31-35, ko-no-si <- 38-34-40, we-re-we <- 12-23-12, ku-pa-sa <- 33-09-36
+  [reversed] three-plus-syllable real words found on scrambled discs: 176 across 12 controls; on the real disc: 43 across 3 seeds
+  [reversed] POST-HOC, repeat-preserving controls, v2: real [20, 20, 18] | controls 16 to 20 (mean 17.9) -> real beats every control on all seeds: no
+
+attacks passed: 0 of 4

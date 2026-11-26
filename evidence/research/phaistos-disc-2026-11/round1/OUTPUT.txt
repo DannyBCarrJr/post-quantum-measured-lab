@@ -1,0 +1,223 @@
+# Captured run of the round-one kit, 2026-11-25. Python 3.14.4, numpy 2.5.5, scipy 1.18.1 (fullkey.py only).
+# Same corpus commits as ../OUTPUT.txt.
+
+$ python3 -I phaistos.py
+Words: 61 (A=31, B=30)
+Legible sign tokens: 241  |  distinct signs: 45
+Word length: min 2, max 7, mean 3.97
+
+Hapax (seen once): 9  |  seen twice: 8
+Chao1 estimated total sign inventory: ~50
+
+Expected distinct signs in a 241-token sample (Zipf-ish usage):
+  alphabet       inventory   25 -> ~25 distinct
+  syllabary      inventory   60 -> ~49 distinct
+  syllabary      inventory   90 -> ~62 distinct
+  logo-syllabic  inventory  200 -> ~86 distinct
+  logographic    inventory  800 -> ~120 distinct
+
+Sign 02 (plumed head): total 19 | word-initial 19
+Bigram 02-12 opens 13 words
+Most common word-final signs: [('07', 8), ('35', 7), ('01', 7), ('18', 5), ('12', 4)]
+
+Repeated words: [('29-45-07', 2), ('02-27-25-10-23-18', 2), ('28-01', 2), ('02-12-31-26', 3), ('02-12-27-27-35-37-21', 2), ('10-03-38', 2), ('22-29-36-07-08', 2)]
+Repeated 2-sign endings: [('01-18', 2), ('45-07', 3), ('19-35', 2), ('40-07', 2), ('23-18', 2), ('31-26', 3), ('37-21', 2), ('03-38', 2), ('39-33', 2), ('07-08', 3), ('23-25', 2)]
+Words that also appear WITHOUT the 02-12 prefix: [('02-12-13-01', '13-01')]
+
+Unigram entropy: 4.99 bits/sign (max for 45 signs = 5.49)
+
+Top 10 signs: [('02', 19), ('07', 18), ('12', 17), ('27', 15), ('18', 12), ('01', 11), ('29', 11), ('35', 11), ('23', 11), ('25', 7)]
+
+$ python3 -I litany.py
+
+Side A: 31 words, 02-prefixed: 14
+[0]02-12-13-01-18 [1]24-40-12 [2]29-45-07 [3]29-29-34 [4]02-12-04-40-33 [5]27-45-07-12 [6]27-44-08 [7]02-12-06-18-? [8]31-26-35 [9]02-12-41-19-35 [10]01-41-40-07 [11]02-12-32-23-38 [12]39-11 [13]02-27-25-10-23-18 [14]28-01 [15]02-12-31-26 [16]02-12-27-27-35-37-21 [17]33-23 [18]02-12-31-26 [19]02-27-25-10-23-18 [20]28-01 [21]02-12-31-26 [22]02-12-27-14-32-18-27 [23]06-18-17-19 [24]31-26-12 [25]02-12-13-01 [26]23-19-35 [27]10-03-38 [28]02-12-27-27-35-37-21 [29]13-01 [30]10-03-38
+ refrain 02-12-31-26 at [15, 18, 21] gaps [3, 3]
+
+Side B: 30 words, 02-prefixed: 5
+[0]02-12-22-40-07 [1]27-45-07-35 [2]02-37-23-05 [3]22-25-27 [4]33-24-20-12 [5]16-23-18-43 [6]13-01-39-33 [7]15-07-13-01-18 [8]22-37-42-25 [9]07-24-40-35 [10]02-26-36-40 [11]27-25-38-01 [12]29-24-24-20-35 [13]16-14-18 [14]29-33-01 [15]06-35-32-39-33 [16]02-09-27-01 [17]29-36-07-08 [18]29-08-13 [19]29-45-07 [20]22-29-36-07-08 [21]27-34-23-25 [22]07-18-35 [23]07-45-07 [24]07-23-18-24 [25]22-29-36-07-08 [26]09-30-39-18-07 [27]02-06-35-23-07 [28]29-34-23-25 [29]45-07
+
+Words on both sides: {'29-45-07'}
+Shared cores after stripping prefix: {'29-45-07'}
+
+$ python3 -I crib.py
+Words matching A-SA-SA-RA-ME shape: ['29-24-24-20-35']
+sign 29=A: {'init': 9, 'mid': 2}
+sign 24=SA: {'init': 1, 'mid': 4, 'final': 1}
+sign 20=RA: {'mid': 2}
+sign 35=ME: {'final': 7, 'mid': 4}
+
+Partial substitution:
+02-12-13-01-18  SA-40-12  A-45-07  A-A-34  02-12-04-40-33  27-45-07-12  27-44-08  02-12-06-18-?  31-26-ME  02-12-41-19-ME  01-41-40-07  02-12-32-23-38  39-11  02-27-25-10-23-18  28-01  02-12-31-26  02-12-27-27-ME-37-21  33-23  02-12-31-26  02-27-25-10-23-18  28-01  02-12-31-26  02-12-27-14-32-18-27  06-18-17-19  31-26-12  02-12-13-01  23-19-ME  10-03-38  02-12-27-27-ME-37-21  13-01  10-03-38  02-12-22-40-07  27-45-07-ME  02-37-23-05  22-25-27  33-SA-RA-12  16-23-18-43  13-01-39-33  15-07-13-01-18  22-37-42-25  07-SA-40-ME  02-26-36-40  27-25-38-01  A-SA-SA-RA-ME  16-14-18  A-33-01  06-ME-32-39-33  02-09-27-01  A-36-07-08  A-08-13  A-45-07  22-A-36-07-08  27-34-23-25  07-18-ME  07-45-07  07-23-18-SA  22-A-36-07-08  09-30-39-18-07  02-06-ME-23-07  A-34-23-25  45-07
+
+Null model: random text produces that coincidence 8.2% of the time
+
+$ python3 -I scripts/la_test.py LinearAInscriptions.js phaistos.py
+Linear A syllabic word tokens: 1236 | unique words (2+ signs): 896
+Crib source present: ['A-SA-SA-RA', 'A-SA-SA-RA-ME', 'JA-SA-SA-RA', 'JA-SA-SA-RA-MA', 'JA-SA-SA-RA-ME', 'RI-QE-TI-A-SA-SA-RA-*325', 'SA-SA-RA-ME']
+
+PRE-REGISTERED KEY {'29': 'A', '24': 'SA', '20': 'RA', '35': 'ME'}
+Disc words testable (2+ fixed signs, crib word excluded): 3
+Words producing a real Linear A word: 1
+    33-24-20-12 -> ['QA-SA-RA-KU']
+Null (random syllables): mean 0.11 hits, p(>= 1) = 0.103
+Null (random disc signs): mean 0.11 hits, p(>= 1) = 0.090
+
+Look-elsewhere: 50 Linear A words (4+ signs) contain a repeat;
+  5 of them (10%) have exactly one disc word of identical shape
+
+Positional fingerprint (Initial/Medial/Final share):
+  disc 29 (n=11) {'I': 0.82, 'M': 0.18, 'F': 0.0}   vs   LA A (n=170) {'I': 0.91, 'M': 0.06, 'F': 0.03}
+  disc 24 (n=6) {'I': 0.17, 'M': 0.67, 'F': 0.17}   vs   LA SA (n=126) {'I': 0.44, 'M': 0.4, 'F': 0.16}
+  disc 20 (n=2) {'I': 0.0, 'M': 1.0, 'F': 0.0}   vs   LA RA (n=100) {'I': 0.14, 'M': 0.41, 'F': 0.45}
+  disc 35 (n=11) {'I': 0.0, 'M': 0.36, 'F': 0.64}   vs   LA ME (n=38) {'I': 0.13, 'M': 0.21, 'F': 0.66}
+
+$ python3 -I scripts/fingerprint.py LinearAInscriptions.js phaistos.py
+Fingerprint distance, crib key: 2.39 | random keys mean 3.88 | p = 0.018
+A + ME only: 0.69 | p = 0.014
+
+$ python3 -I scripts/fullkey.py LinearAInscriptions.js phaistos.py
+
+== Standard (outside-in per Ridderstad) ==
+ fitted key: exact hits 1, bigram LL -3.455
+ vs random keys      : hits mean 0.49 p=0.340 | LL mean -4.075 p=0.000
+ vs fitted-on-scramble: hits mean 1.34 p=0.762 | LL mean -3.691 p=0.000
+ crib signs got: {'29': 'KU', '24': 'MI', '20': 'DE', '35': 'RE'}
+ exact hits: ['45-07=RI-JA']
+ sample reading (side A, first 8): A-NA-MA-TE-RA  MI-DI-NA  KU-RI-JA  KU-KU-SU  A-NA-TO-DI-TU  SA-RI-JA-NA  SA-KE-RO  KI-RU-RE
+
+== Reversed reading direction ==
+ fitted key: exact hits 1, bigram LL -3.441
+ vs random keys      : hits mean 0.51 p=0.356 | LL mean -4.080 p=0.000
+ vs fitted-on-scramble: hits mean 1.35 p=0.783 | LL mean -3.687 p=0.000
+
+$ python3 -I scripts/placenames.py LinearAInscriptions.js phaistos.py
+
+== PA-I-TO (Phaistos) ==  candidate slots on disc: 20
+ best slot: 02-12-41-19-35 [02-12 tag] -> 0 supporting words []
+ decoys (300 same-shape LA words): mean best 1.35, p = 1.000
+ slots that are 02-tagged: 8 | slots inside side-A litany: []
+
+== JA-DI-KI-TU (Dikte (sacred mtn)) ==  candidate slots on disc: 20
+ best slot: 07-23-18-24 [bare] -> 3 supporting words [('07-45-07', 'JA-SA-JA'), ('07-18-35', 'JA-KI-PA₃'), ('16-23-18-43', 'A-DI-KI-TE')]
+ decoys (131 same-shape LA words): mean best 2.15, p = 0.260
+ slots that are 02-tagged: 1 | slots inside side-A litany: ['02-12-31-26']
+
+== SU-KI-RI-TA (Sybrita) ==  candidate slots on disc: 20
+ best slot: 07-24-40-35 [bare] -> 2 supporting words [('24-40-12', 'KI-RI-SI'), ('07-18-35', 'SU-JU-TA')]
+ decoys (131 same-shape LA words): mean best 2.15, p = 0.748
+ slots that are 02-tagged: 1 | slots inside side-A litany: ['02-12-31-26']
+
+$ python3 -I scripts/dikte_kpa.py LinearAInscriptions.js phaistos.py
+== 1. Dikte variant family ==
+Key: {'07': 'JA', '23': 'DI', '18': 'KI', '24': 'TU', '16': 'A', '43': 'TE'}
+Supporting disc words: 3 | positional-fit distance: 0.65 (lower = better)
+Decoy variant families from Linear A: 26
+  p(support >= 3) = 0.000
+  p(fit <= 0.65)   = 0.038
+  p(both)          = 0.000
+
+== 2. Known-plaintext attack: libation formula ==
+ 2-word windows: formula 37, consistent placements on disc 15 | formula windows that fit: 16.2% vs other Linear A text: 36.2%
+    I-PI-NA-MA SI-RU-TE  <=>  06-18-17-19 31-26-12
+    I-PI-NA-MA SI-RU-TE  <=>  02-12-13-01 23-19-35
+    I-PI-NA-MA SI-RU-TE  <=>  02-37-23-05 22-25-27
+ 3-word windows: formula 29, consistent placements on disc 0 | formula windows that fit: 0.0% vs other Linear A text: 1.1%
+
+== 1b. Fair null: every family may choose its best disc pair (same selection the real one got) ==
+Disc pairs of form X-m-n-Y / Z-m-n-W: 2
+Linear A variant families tested: 34 | Dikte best: 3
+Families scoring >= Dikte: 2 -> p = 0.059
+Top families: [(3, 'JA-DI-KI-TU/A-DI-KI-TE'), (3, 'A-DI-KI-TE/JA-DI-KI-TU'), (2, 'U-MI-NA-SI/KU-MI-NA-QE'), (2, 'SA-MI-DA-E/JA-MI-DA-RE'), (2, 'RI-RU-MA-TI/JA-RU-MA-NE')]
+
+$ python3 -I scripts/locked_prediction.py LinearAInscriptions.js phaistos.py
+Keyed transitions in the rest of the disc:
+   18->> = KI->>  logP -1.98
+   <->24 = <->TU  logP -4.25
+   07->> = JA->>  logP -1.24
+   07->> = JA->>  logP -1.24
+   23->18 = DI->KI  logP -2.77
+   18->> = KI->>  logP -1.98
+   23->> = DI->>  logP -1.82
+   23->18 = DI->KI  logP -2.77
+   18->> = KI->>  logP -1.98
+   <->23 = <->DI  logP -3.86
+   07->> = JA->>  logP -1.24
+   18->> = KI->>  logP -1.98
+   <->07 = <->JA  logP -3.08
+   07->24 = JA->TU  logP -6.04
+   24->24 = TU->TU  logP -5.43
+   <->16 = <->A  logP -2.16
+   18->> = KI->>  logP -1.98
+   07->> = JA->>  logP -1.24
+   <->07 = <->JA  logP -3.08
+   07->18 = JA->KI  logP -4.09
+   <->07 = <->JA  logP -3.08
+   07->> = JA->>  logP -1.24
+   18->07 = KI->JA  logP -5.79
+   07->> = JA->>  logP -1.24
+   23->07 = DI->JA  logP -3.76
+   07->> = JA->>  logP -1.24
+   07->> = JA->>  logP -1.24
+M = -2.661 over 27 transitions
+
+(1) random keys: p = 0.000  -> pass
+(2) rank among 28 real-family keys: 3  -> FAIL
+    top families: [('JA-MI-DA-RE/A-MI-DA-O', -2.65), ('JA-MI-DA-RE/A-MI-DA-U', -2.65), ('JA-DI-KI-TU/A-DI-KI-TE', -2.66), ('JA-MI-DA-RE/SA-MI-DA-E', -2.69)]
+
+LOCKED VERDICT: FAIL
+
+$ python3 -I scripts/dict_attack.py LinearAInscriptions.js LinearBInscriptions.js lexicon.js phaistos.py
+{'Linear A': 896, 'Linear B': 5049, 'Linear A+B': 5858} | shared LA∩LB words: 87
+
+== Linear A dictionary ==
+ real disc: exact hits 11 (objective 197)
+ scrambled discs: exact hits [9, 9, 9, 10, 10, 11, 11, 11, 12, 12, 12, 13]  mean 10.8
+ verdict: FAIL
+    24-40-12 = TI-NU-JA
+    29-45-07 = A-DA-RA
+    27-44-08 = SA-*301-RI
+    12-31-26 = JA-DI-WI
+    12-31-26 = JA-DI-WI
+    12-31-26 = JA-DI-WI
+    12-13-01 = JA-PA-QA
+    23-19-35 = KI-TA-I
+
+== Linear B dictionary ==
+ real disc: exact hits 20 (objective 257)
+ scrambled discs: exact hits [15, 16, 16, 16, 17, 17, 17, 18, 18, 18, 18, 19]  mean 17.1
+ verdict: PASS
+    24-40-12 = SO-WO-TE
+    29-45-07 = A-KE-E
+    27-44-08 = RO-QO-TA
+    31-26-35 = RI-JA-KO
+    12-31-26 = TE-RI-JA
+    12-31-26 = TE-RI-JA
+    12-31-26 = TE-RI-JA
+    12-13-01 = TE-O-JO
+
+== Linear A+B dictionary ==
+ real disc: exact hits 17 (objective 244)
+ scrambled discs: exact hits [15, 16, 16, 16, 16, 17, 17, 17, 17, 17, 18, 18]  mean 16.7
+ verdict: FAIL
+    29-45-07 = E-WI-TE
+    12-31-26 = KA-RE-U
+    12-31-26 = KA-RE-U
+    12-31-26 = KA-RE-U
+    31-26-12 = RE-U-KA
+    12-13-01 = KA-NA-TO
+    23-19-35 = TA-NI-JO
+    10-03-38 = TU-JU-MA
+
+$ python3 -I scripts/dict_attack_v2.py LinearAInscriptions.js LinearBInscriptions.js lexicon.js phaistos.py
+unique disc words: 52
+
+== Linear B ==
+ real runs (unique hits): [16, 16, 17]
+ scrambled: [13, 14, 14, 14, 15, 15, 15, 15, 15, 15, 16, 17] mean 14.8
+ verdict: FAIL
+
+== Linear A+B ==
+ real runs (unique hits): [17, 15, 15]
+ scrambled: [13, 14, 14, 15, 16, 16, 16, 16, 16, 17, 17, 17] mean 15.6
+ verdict: FAIL
