@@ -23,7 +23,7 @@ git clone https://github.com/mwenge/linearb.xyz
 python3 -I recon.py
 python3 -I attack.py lineara.xyz/LinearAInscriptions.js linearb.xyz/LinearBInscriptions.js linearb.xyz/lexicon.js
 ```
-Python 3.11 or later, standard library only. The attack takes about a minute on a laptop.
+Standard library only. Tested on Python 3.14.4; older versions were not tried. The attack takes about 20 seconds on a laptop.
 Output is deterministic: the seed is fixed and nothing depends on hash order, checked by
 running under two different `PYTHONHASHSEED` values and comparing byte for byte.
 
